@@ -1,0 +1,23 @@
+[
+  {
+    question: "Is JavaScript case sensitive?",
+    choices: ["Yes", "No"],
+    answer: 0
+  },
+  {
+    question: "Which is not the basic type in JavaScript?",
+    choices: ["String", "Null", "Object", "Number", "Boolean"],
+    answer: 2
+  },
+  {
+    question: "What does '1'+2+4 evaluate to",
+    choices: ["7", "124", "16"],
+    answer: 1
+  },
+  {
+    question: "Does JavaScript support method override?",
+    choices: ["Yes", "No"],
+    answer: 
+  }
+]
+
