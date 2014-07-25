@@ -5,7 +5,7 @@
     answer: 0
   },
   {
-    question: "Which is not the basic type in JavaScript?",
+    question: "Which is not the primitive type in JavaScript?",
     choices: ["String", "Null", "Object", "Number", "Boolean"],
     answer: 2
   },
