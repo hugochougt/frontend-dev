@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Document Type</title>
+  </head>
+
+  <body>
+    <div id="myDiv">Some text</div>
+    <p>Time is
+      <script type="text/javascript">
+          document.write("<strong>" + (new Date()).toString() + "</strong>");
+      </script>
+    </p>
+
+    <script type="text/javascript">
+      console.log("nodeType: " + document.nodeType);
+      console.log("nodeName: " + document.nodeName);
+      console.log("documentElement: " + document.documentElement);
+      console.log("doctype: " + document.doctype);
+      console.log("First of childNodes: " + document.childNodes[0]);
+      console.log("Second of childNodes: " + document.childNodes[1]);
+      console.log("URL: " + document.URL);
+      console.log("Domain: " + document.domain);
+
+      var div = document.getElementById("myDiv");
+      console.log("#myDiv: " + div);
+
+      var allElements = document.getElementsByTagName("*");
+      console.log("Number of all elements: " + allElements.length);
+    </script>
+  </body>
+</html>
