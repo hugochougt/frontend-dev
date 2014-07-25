@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Recursion Example</title>
+  </head>
+
+  <body>
+    <p>Recursive factorial function.</p>
+    <script type="text/javascript">
+      alert("10! = " + factorial(10));
+      function factorial(num) {
+        if (num <= 1) {
+          return 1;
+        }
+        else {
+          return num * arguments.callee(num - 1);
+        }
+      }
+    </script>
+  </body>
+</html>
