@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Text Type Example</title>
+  </head>
+
+  <body>
+    <!-- no content, so no text node -->
+    <div id="blank"></div>
+
+    <!-- white space, so one text node -->
+    <div> </div>
+
+    <!-- content, so one text node -->
+    <div id="hello">Hello</div>
+
+    <script type="text/javascript">
+        var div = document.getElementById("hello");
+        var text = div.firstChild;
+        alert("Original text: " + text);
+
+        div.firstChild.nodeValue = "Hi, world!";
+
+        var newTextNode = document.createTextNode("<strong>Content created by createTextNode() method.</strong>");
+        var blankDiv = document.getElementById("blank");
+        blankDiv.appendChild(newTextNode);
+    </script>
+  </body>
+</html>
