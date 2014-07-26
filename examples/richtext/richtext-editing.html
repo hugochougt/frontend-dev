@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+  </head>
+
+  <body>
+    <iframe name="richtext" style="height:480px;width:240px;" src="blank.html"></iframe>
+
+    <script src="../EventUtil.js"></script>
+    <script type="text/javascript">
+        EventUtil.addHandler(window, "load", function() {
+          frames["richtext"].document.designMode = "on";
+        });
+    </script>
+  </body>
+</html>
