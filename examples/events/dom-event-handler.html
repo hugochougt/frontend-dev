@@ -9,6 +9,7 @@
   <body>
     <p><input id="btn1" type="button" value="button 1"></p>
     <p><input id="btn2" type="button" value="button 2"></p>
+    <p><input id="btn3" type="button" value="button 3"></p>
 
     <script type="text/javascript">
       var btn1 = document.getElementById("btn1");
@@ -35,6 +36,25 @@
 
       function showId() {
         alert(this.id);
+      }
+    </script>
+
+    <script type="text/javascript">
+      var btn = document.getElementById("btn3");
+      btn.onclick = function(event) {
+        console.log("id: " + this.id);
+        console.log("target:" + event.target);
+        console.log("event.currentTarget === this?? - " + (event.currentTarget === this));
+        console.log("event.target === this?? - " + (event.target === this));
+        event.stopPropagation();
+      };
+
+      document.body.onclick = function(event) {
+        console.log("event on body click");
+        console.log("target:" + event.target);
+        console.log("this: " + this);
+        console.log("event.currentTarget === this?? - " + (event.currentTarget === this));
+        console.log("event.target === this?? - " + (event.target === this));
       }
     </script>
   </body>
