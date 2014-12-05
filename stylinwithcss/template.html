@@ -6,9 +6,26 @@
     <title>HTML5 Template</title>
     <style type="text/css">
       p {color: red;}
+      p em {color: green;} /* 上下文选择符 */
+      section > h2 {font-style: italic;} /* 子选择符 */
+      h2 + p {font-variant: small-caps;} /* 紧邻同胞选择符 */
+      h2 ~ a {color: black;} /* 一般同胞选择符 */
     </style>
   </head>
   <body>
     <p>This text is very important!</p>
+    <article>
+      <h1>Contextual selectors are <em>very</em> selective</h1>
+      <p>This example shows how to target a <em>specific</em> tag.</p>
+      <section>
+        <h2>An H2 Heading</h2>
+        <p>This is paragraph 1</p>
+        <p>Paragraph 2 has <a href="#">a link</a> in it.</p>
+        <a href="#">Link</a>
+      </section>
+      <aside>
+        <p>Contextual selectors are <em>very</em> useful!</p>
+      </aside>
+    </article>
   </body>
 </html>
