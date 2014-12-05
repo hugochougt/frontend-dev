@@ -5,11 +5,19 @@
     <meta charset="utf-8" />
     <title>HTML5 Template</title>
     <style type="text/css">
-      p {color: red;}
+      p {
+        color: red;
+        font-family: helvetica, sans-serif;
+        font-size: 1.2em;
+      }
       p em {color: green;} /* 上下文选择符 */
       section > h2 {font-style: italic;} /* 子选择符 */
       h2 + p {font-variant: small-caps;} /* 紧邻同胞选择符 */
       h2 ~ a {color: black;} /* 一般同胞选择符 */
+      .specialtext {font-style: italic;}
+      p.specialtext {color: green;}
+      p.specialtext span {font-weight: bold;}
+      .specialtext.featured {font-size: 120%;}
     </style>
   </head>
   <body>
@@ -27,5 +35,8 @@
         <p>Contextual selectors are <em>very</em> useful!</p>
       </aside>
     </article>
+    <h1 class="specialtext featured">This is a heading with the <span>same class</span>as the second paragraph.</h1>
+    <p>This tag has no class.</p>
+    <p class="specialtext"> When a tag has a class attribute, you can target it <span>regardless</span> of its position in the hierarchy.</p>
   </body>
 </html>
