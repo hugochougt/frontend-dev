@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Multi-Row, Multi-Column Layout</title>
+  <style>
+    * {margin:0; padding:0;}
+    body {
+      font-family:helvetica, arial, sans-serif; 
+    }
+    #wrapper {
+      width:960px; margin:0 auto; overflow:hidden; border:1px solid #6b5678;
+    }
+    header {
+      background: #a292ac;
+      padding: 3px 10px;
+    }
+    header h1 {
+      font-family: Metrophobic;
+      font-size: 2.5em;
+      letter-spacing: -.05em;
+      color: white;
+    }
+    section#feature_area article {
+      float: left;
+      width: 320px;
+      padding: 10px 0;
+      background: #fff;
+      border-top: 4px solid #f7be84;
+    }
+    section#feature_area article .inner {
+      margin: 10px 20px;
+      padding: 5px;
+      background: #fff;
+      border: 5px solid;
+    }
+    section#feature_area article:nth-child(1) .inner {
+      border-color: #d7dd6f;
+    }
+    section#feature_area article:nth-child(2) .inner {
+      border-color: #f6dec5;
+    }
+    section#feature_area article:nth-child(3) .inner {
+      border-color: #d1d8e4;
+    }
+    #promo_area article {
+      float: left;
+      width: 240px;
+      padding: 10px 0;
+      border-top: 4px solid #f7be84;
+      background: #fff;
+    }
+    #promo_area article .inner {
+      margin: 0 20px;
+      padding: 10px;
+      background: #e5e8ed;
+    }
+    footer {
+      clear: both;
+      text-align: center;
+      background: #6b5678;
+    }
+  </style>
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <h1>Full-width content</h1>
+  </header>
+  <nav>
+    <p>Navigation menus go here</p>
+  </nav>
+  <section id="branding">
+    <img src="images/grand_canyon.jpg" alt="Grand Canyon Sunset" />
+  </section><!--end branding area-->
+
+  <section id="feature_area">
+    <article>
+      <div class="inner">
+        <p>Integer at neque in magna lacinia bibendum sit amet sit amet dolor.</p>
+      </div>
+    </article>
+
+    <article>
+      <div class="inner">
+        <p>Integer at neque in magna lacinia bibendum sit amet sit amet dolor.</p>
+      </div>
+    </article>
+
+    <article>
+      <div class="inner">
+        <p>Integer at neque in magna lacinia bibendum sit amet sit amet dolor.</p>
+      </div>
+    </article>
+
+  </section><!--end feature_area-->
+
+  <section id="promo_area">
+    <article>
+      <div class="inner">
+        <p>Integer at neque in magna lacinia bibendum sit amet sit amet dolor. Nam consequat ullamcorper eros, sed bibendum metus faucibus sit amet.</p>
+      </div>
+    </article>
+
+    <article>
+      <div class="inner">
+        <p>Integer at neque in magna lacinia bibendum sit amet sit amet dolor. Nam consequat ullamcorper eros, sed bibendum metus faucibus sit amet.</p>
+      </div>
+    </article>
+
+    <article>
+      <div class="inner">
+        <p>Integer at neque in magna lacinia bibendum sit amet sit amet dolor. Nam consequat ullamcorper eros, sed bibendum metus faucibus sit amet.</p>
+      </div>
+    </article>
+    <article>
+      <div class="inner">
+        <p>Integer at neque in magna lacinia bibendum sit amet sit amet dolor. Nam consequat ullamcorper eros, sed bibendum metus faucibus sit amet.</p>
+      </div>
+    </article>
+
+  </section><!--end promo_area-->
+  <footer>
+    <p> A CSS template from <a href="http://www.stylinwithcss.com"><em>Stylin&rsquo; with CSS, Third Edition</em></a> by Charles Wyke-Smith</p>
+  </footer>
+</div>
+</body>
+</html>
