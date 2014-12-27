@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Design Demo</title>
+  <style type="text/css">
+    form.stylin_form {
+      width: 14em;
+      margin: 20px auto;
+      border: 1px solid #bbb7ae;
+      padding: .5em .5em .15em;
+    }
+    .stylin_form h3 {
+      margin: 0;
+      padding: 0 0 .2em .2em;
+      font-weight: 600;
+      color: #bbb7ae;
+    }
+    .stylin_form fieldset {
+      margin: 0;
+      padding: 0 0 .2em 0;
+      width: 100%;
+      border: 0;
+    }
+    .stylin_form legend {
+      width: 100%;
+      padding: .3em 0;
+      background: #bbb7ae;
+    }
+    .stylin_form legend {
+      display: block;
+      font-size: 1em;
+      line-height: 1.1em;
+      padding: 0 0 0 .4em;
+      font-weight: 700;
+      color: #fff;
+    }
+    .stylin_form section {
+      overflow: hidden;
+      padding: .2em 0 .4em 0;
+      border-bottom: 8px solid #e7e5df;
+    }
+    .stylin_form section:last-child {
+      border-bottom: 0;
+    }
+    .stylin_form section label, .stylin_form section h4 {
+      display: block;
+      clear: both;
+      margin: .3em .3em 0 0;
+      padding-bottom: .1em;
+      font-size: .8em;
+      font-family: 'Dorid Sans';
+      font-weight: 400;
+      line-height: 1.1em;
+    }
+    .stylin_form section label span, .stylin_form section h4 span {
+      font-size: .75em;
+      vertical-align: text-top;
+      color: #f00;
+    }
+    .stylin_form section p.note {
+      font-size: .7em;
+      color: #f00;
+      margin: 0;
+      padding: 0 0 .3em 0;
+    }
+    .stylin_form section input,
+    .stylin_form section textarea,
+    .stylin_form section select {
+      margin: .2em .5em .2em 0;
+      padding: .2em .4em;
+      color: #000,
+      box-shadow: 1px 1px 3px #ccc;
+      font-size: .8em;
+      font-family: inherit; /* 针对 FireFox - 没有这条声明会在 textarea 上使用 Courier */
+      outline: none;
+    }
+    .stylin_form section input,
+    .stylin_form section textarea {
+      width: 12em;
+      border: 1px solid #bbb7ae;
+      border-radius: 3px;
+    }
+    .stylin_form section textarea {
+      height: 5em;
+      margin-top: .3em;
+      line-height: 1.1em;
+    }
+    .stylin_form section p {
+      margin: .3em .75em 0;
+      clear: both;
+      font-size: .7em;
+      line-height: 1.1;
+      color: #000;
+    }
+    .stylin_form section p.error {
+      color: #f00;
+    }
+    .stylin_form section section {
+      overflow: hidden;
+      margin: .2em 0 .3em .4em;
+      padding: 0 0 .1em 0;
+      border-bottom: none;
+    }
+    .stylin_form section section input {
+      float: left;
+      clear: both;
+      width: auto;
+      margin: .1em 0 0 .3em;
+    }
+    .stylin_form section section label {
+      float: left;
+      clear: none;
+      width: 15em;
+      margin: .15em 0 0 .6em;
+      font-weight: normal;
+      font-size: .7em;
+      line-height: 1.2em;
+    }
+    .stylin_form section select {
+      margin-left: .4em;
+      font-size: .85em;
+    }
+    .stylin_form section input[type="submit"] {
+      width: auto;
+      margin: .4em .3em 0 0;
+      font-size: 1em;
+      font-weight: 800;
+      color: #fff;
+      background-color: #bbb7ae;
+      cursor: pointer;
+    }
+    .stylin_form > section:last-child {
+      text-align: center;
+    }
+    form.stylin_form.labels_left {
+      width: 22em;
+    }
+    form.stylin_form.labels_left label,
+    form.stylin_form.labels_left h4 {
+      float: left;
+      width: 8em;
+    }
+    form.stylin_form.labels_left p {
+      margin: 0 0 0 9.35em;
+      padding: .3em 0 0 0;
+      clear: both;
+    }
+    form.stylin_form.labels_left p.note {
+      margin: 0 0 .2em 0;
+    }
+    form.stylin_form.labels_left section section {
+      width: 10em;
+      margin-left: 6.5em;
+      padding-top: 0;
+    }
+    form.stylin_form.labels_left section section input {
+      width: 1.25em;
+      margin-left: 0;
+    }
+    form.stylin_form.labels_left section input,
+    form.stylin_form.labels_left section textarea,
+    form.stylin_form.labels_left section select {
+      float: left;
+      width: 12em;
+    }
+    form.stylin_form.labels_left section select {
+      margin-left: .2em;
+    }
+    form.stylin_form.labels_left > section input[type=submit] {
+      float: none;
+    }
+  </style>
+</head>
+<body>
+  <form class="stylin_form labels_left" action="process_from.php" method="post">
+    <h3>A Stylin' Form</h3>
+    <fieldset>
+      <legend><span>Part 1 &#8226; Basic Controls</span></legend>
+      <section>
+        <p class="note">* indicates required field</p>
+        <label for="user_name">User Name<span> *</span></label>
+        <input id="user_name" class="user_name" type="text" />
+        <p>Please select a user name</p>
+      </section>
+
+      <section>
+        <label for="password">Password<span> *</span></label>
+        <input id="password" class="password" type="password" maxlength="20" />
+        <p>Password must be 8 or more</p>
+      </section>
+
+      <section>
+        <label for="description">Description</label>
+        <textarea id="description" class="description" placeholder="Enter the description here."></textarea>
+      </section>
+
+      <section>
+        <label for="description">Date</label>
+        <input id="special_date" type="date" name="event_date" min="2012-09-05" />
+      </section>
+    </fieldset>
+
+    <fieldset>
+      <legend><span>Part 2 &#8226; Multiple-Choice Controls</span></legend>
+      <section>
+        <h4>Select Any Number</h4>
+        <section>
+          <input type="checkbox" id="check1" name="checkset" value="1" tabindex="4" />
+          <label for="check1">Choice 1</label>
+        </section>
+        <section>
+          <input type="checkbox" checked="checked" id="check2" name="checkset" value="2" />
+          <label for="check2">Choice 2 is pre-checked</label>
+        </section>
+        <section>
+          <input type="checkbox" id="check3" name="checkset" value="3" />
+          <label for="check3">Choice 3&mdash;add as many as you need!</label>
+        </section>
+        <p>You must choose one or more</p>
+      </section>
+      <section>
+        <h4>Select Only One</h4>
+        <section>
+          <input checked="checked" id="radio1" name="radioset" type="radio" value="Choice_1" />
+          <label for="radio1">Choice 1 is pre-selected and shows the text wraps nicely if it goes to multiple lines.</label>
+        </section>
+        <section>
+          <input id="radio2" name="radioset" type="radio" value="Choice_2" />
+          <label for="radio2">Choice 2</label>
+        </section>
+        <section>
+          <input id="radio3" name="radioset" type="radio" value="Choice_3" />
+          <label for="radio3">Choice 3</label>
+        </section>
+      </section>
+      <section>
+        <label for="select_choice">Select Your Choice</label>
+        <select id="select_choice" name="select_choice">
+          <option value="0">None</option>
+          <option value="1">Choice 1</option>
+          <option value="2">Choice 2</option>
+          <option value="3">Choice 3</option>
+          <option value="4">Choice 4</option>
+        </select>
+      </section>
+    </fieldset>
+    <section><input type="submit" value="Submit This Form" /></section>
+  </form>
+</body>
+</html>

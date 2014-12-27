@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Form Design</title>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      font-family: helvetica, arial, sans-serif;
+      display: block;
+      overflow: hidden;
+      width: 500px;
+      margin: 30px;
+      border-radius: 6px;
+      background-color: #ddd;
+    }
+    form.stylin_form_search {
+      float: right;
+      width: 200px;
+      margin: 5px;
+      padding: 5px;
+    }
+    form.stylin_form_search input {
+      float: right;
+      width: 70px;
+      padding: 2px 0 3px 5px;
+      outline: none;
+      font-size: .8em;
+      border-color: #eee #ccc #ccc #eee;
+      border-radius: 10px;
+      -webkit-transition: 2s width;
+         -moz-transition: 2s width;
+              transition: 2s width;
+    }
+    form.stylin_form_search input:focus {
+      width: 200px;
+    }
+    form.stylin_form_search label { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <form class="stylin_form_search" action="#" method="post">
+      <label for="search">search</label>
+      <input id="search" type="search" name="search" placeholder="search" />
+    </form>
+  </header>
+</body>
+</html>
