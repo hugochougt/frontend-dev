@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relative Position Demo</title>
+  <style type="text/css">
+    div#outer {
+      position: relative;
+      width: 250px;
+      margin: 50px 40px;
+      border-top: 3px solid red;
+    }
+    div#inner {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="outer">
+    <div id="inner"> This is text for a paragraph to demonstrate contextual
+    positioning. Here are two divs, one nested in the other. The outer div has
+    a red top border and the inner div has a gray background.
+    Both elements have default static positioning.</div>
+  </div>
+</body>
+</html>
