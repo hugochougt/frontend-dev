@@ -1,0 +1,59 @@
+body {
+  background-color: #dcdbd9;
+  color: #2c2c2c;
+  font: normal 100% Cambria, Georgia, serif;
+}
+
+h1 {
+  font-size: 1.5em; /* 24px / 16px */
+  font-style: italic;
+  font-weight: normal;
+}
+
+h1 a {
+  color: #747474;
+  font: bold 0.458333333333333em Calibri, Optima, Arial, sans-serif; /* 11px / 24px */
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.lede {
+  padding: 0.8em 5.33333333%; /* 48px / 900px */
+}
+
+#page {
+  margin: 36px auto;
+  /*widht: 960px;*/
+  width: 90%;
+}
+
+.blog {
+  margin: 0 auto 53px;
+  widht: 93.75%; /* 960px / 900px */
+}
+
+.blog .main {
+  float: left;
+  width: 62.8888889%; /* 566px / 900px */
+}
+
+.article {
+  padding: 40px 8.48056537%; /* 48px / 566px */
+}
+
+.blog .other {
+  float: right;
+  width: 36.7777778%; /* 331px / 900 px */
+}
+
+.date {
+  float: left;
+  margin-left: -17.0886076%; /* 81px / 474px */
+  width: 14.556962%; /* 69px / 474 px */
+}
+
+.recent-entries {
+  margin: 0 auto;
+  width: 69.7885196%; /* 231px / 331 px*/
+}
