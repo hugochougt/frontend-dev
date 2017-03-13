@@ -1,6 +1,6 @@
 # Scope Closure
 
-**Closure si all around you in JavaScript, you just have to recognize and embrace it.**
+**Closure is all around you in JavaScript, you just have to recognize and embrace it.**
 
 The enlightenment moment should be: **oh, closures are already occuring all over my code, I can finally see them now.**
 
